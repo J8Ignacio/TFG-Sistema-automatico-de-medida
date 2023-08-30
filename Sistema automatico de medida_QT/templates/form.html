@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+
+
+
+<div class = 'wrap'>
+    <h1>Sistema Automático de Medida:</h1>
+    <h3>Completa los siguientes datos para el barrido de frecuencia</h3>
+    
+    <form method="POST">
+        <div>
+            <label for 'v_inicial'>Voltaje inicial:</label>
+            <input id = 'v_inicial' name = 'v_inicial' type = 'text' />
+        </div>
+        <div>
+            <label for 'v_final'>Voltaje final:</label>
+            <input id = 'v_final' name = 'v_final' type = 'text' />
+        </div>
+        <div>
+            <label for 'paso'>Paso:</label>
+            <input id = 'paso' name = 'paso' type = 'text' />
+        </div>
+
+        <div>
+            <label for 'nombre'>Nombre:</label>
+            <input id = 'nombre' name = 'nombre' type = 'text' />
+        </div>
+        
+        
+        <input type = 'submit' value = 'Aceptar' />
+    </form>
+</div>
+
+
+
+
+{% endblock %}

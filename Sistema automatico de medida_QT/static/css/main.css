@@ -1,0 +1,44 @@
+body{
+   font-family: 'Lato', sans-serif;
+   color: #012d48;
+   background-color: #f8f5f596;
+}
+
+h1{
+    font-size: 60px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3{
+    margin: 0px;
+    padding: 0px;
+    color: #338dcd;
+}
+
+div.wrap {
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+}
+
+div.wrap div{
+    position: relative;
+    margin: 50px 0;
+}
+
+label {
+  
+    top: 0;
+    font-size: 30px;
+    margin: 10px;
+    padding: 0 10px;
+    background-color: #f8f5f596;
+    
+}
+
+
+

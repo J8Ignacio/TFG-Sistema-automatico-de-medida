@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+
+<div class = 'wrap'>
+    <h1>Sistema Automático de Medida:</h1>
+    <h3>Selecciona qué instrumentos usar:</h3>
+
+    
+
+    
+    <form method="POST">       
+
+        <label for="osciloscopio">Selecciona el osciloscopio:</label>
+        
+        <select name="osciloscopio" id="osciloscopio">
+            {% for instrumento in lista_instr %}
+                <option value= {{loop.index0}} >{{ instrumento }} </option>
+            {% endfor %}
+        </select>
+
+        <label for="generador">Selecciona el generador:</label>
+
+        <select name="generador" id="generador">
+            {% for instrumento in lista_instr %}
+                <option value= {{loop.index0}} >{{ instrumento }} </option>
+            {% endfor %}
+        </select>
+
+        <div>
+            <input type = 'submit' name="submit_button" value = 'Comenzar' />
+
+            <input type = 'submit' name="submit_button" value = 'Volver a buscar' />
+
+        </div>
+
+        
+
+    </form>
+</div>
+
+
+
+
+{% endblock %}
