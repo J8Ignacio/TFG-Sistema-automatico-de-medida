@@ -60,19 +60,20 @@ class Hilo_Lectura(QThread):
             
             self.mensaje = self.cola.get()
 
-            if self.mensaje[0] == 'Error':
-                
+            if self.mensaje != None :
 
-                self.mensaje_recibido.emit('Error')
-
-            elif self.mensaje != None :
-    
-                self.mensaje_recibido.emit('Continua')
+                if self.mensaje[0] == 'Error':
                 
-                if self.parar == False:
-                    self.cola2.put('Continua')
+                    self.mensaje_recibido.emit('Error')
+
                 else:
-                    self.cola2.put('Termina')
+
+                    self.mensaje_recibido.emit('Continua')
+                    
+                    if self.parar == False:
+                        self.cola2.put('Continua')
+                    else:
+                        self.cola2.put('Termina')
             else:
  
                 self.mensaje_recibido.emit('Terminado')
